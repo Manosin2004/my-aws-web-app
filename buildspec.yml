@@ -1,0 +1,18 @@
+version: 0.2
+
+phases:
+  install:
+    runtime-versions:
+      nodejs: 18
+  build:
+    commands:
+      - echo "Build started"
+      - mkdir build
+      - cp -r * build/
+  post_build:
+    commands:
+      - echo "Build finished"
+artifacts:
+  files:
+    - '**/*'
+  base-directory: build
